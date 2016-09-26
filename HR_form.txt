@@ -1,0 +1,26 @@
+<html>
+<head>
+	
+</head>
+<body style = "text-align:center">
+	
+<form method="post" action="http://localhost/new_test_workable/insert1.php">
+Lastname: <input type="text" name="lastname">
+<br /> <br />
+Firstname: <input type="text" name="firstname">
+<br /> <br />
+Middlename: <input type="text" name="middlename">
+<br /> <br />
+Aliases: <input type="text" name="aliases">
+<br /> <br />
+Street Address: <input type="text" name="streetaddress">
+<br /> <br />
+Upload image: <input type="file" name="filepicture">
+<br /> <br />
+
+
+<input type="submit" name="Submit" value="Submit">
+</form>
+
+</body>
+</html>
