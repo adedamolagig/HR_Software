@@ -5,7 +5,7 @@ include('class.upload.php');
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
 $password=""; // Mysql password 
-$db_name="church"; // Database name 
+$db_name="school"; // Database name 
 $tbl_name="members_info"; // Table name 
 
 // Connect to server and select database.
@@ -16,10 +16,10 @@ mysql_select_db("$db_name")or die("cannot select DB");
 $lastname=$_POST['lastname'];
 $firstname=$_POST['firstname'];
 $middlename=$_POST['middlename'];
-$aliases=$_POST['aliases'];
-$maiden=$_POST['maiden'];
-$streetaddress=$_POST['streetaddress'];
-$previouschurch=$_POST['previous_employer'];
+$completedby=$_POST['completedby'];
+// $maiden=$_POST['maiden'];
+$homeaddress=$_POST['homeaddress'];
+$previousemployer=$_POST['previous_employer'];
 $phonenumber=$_POST['phonenumber'];
 $DOB = $_POST['dob'];
 $SOO = $_POST['soo'];
@@ -66,7 +66,7 @@ $uploadOK=1;
 
 // Insert data into mysql 
 $sql="INSERT INTO $tbl_name (last_name, first_name, middle_name, aliases, maiden_name, street_address, previous_church, Phone_number, DOB, state_of_origin, LGA, brief_info, identification)
-VALUES('$lastname', '$firstname', '$middlename', '$aliases', '$maiden', '$streetaddress', '$previouschurch', '$phonenumber', '$DOB', '$SOO', '$LGA', '$brief_info', '$identification' )";
+VALUES('$lastname', '$firstname', '$middlename', '$completedby', '$homeaddress', '$previousemployer', '$phonenumber', '$DOB', '$SOO', '$LGA', '$brief_info', '$identification' )";
 $result=mysql_query($sql);
 
  //if successfully insert data into database, displays message "Successful". 
